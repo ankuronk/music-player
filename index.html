@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Music Player</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+  body {
+    background-color: #1a1b29;
+    color: #fff;
+    padding-top: 50px;
+  }
+
+  .music-player-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #fff; /* Add border style */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Add border radius */
+  }
+
+  .song-image {
+    width: 50%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+  }
+
+  .player-buttons {
+    margin-bottom: 20px;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .song-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .about-section {
+    text-align: center;
+    padding-top: 20px;
+  }
+</style>
+</head>
+<body><br><br>
+  <div class="music-player-container">
+    <img src="icon.png" alt="Song Image" class="song-image">
+    <div class="player-buttons">
+      <button id="play-button" class="btn btn-primary btn-lg">Play</button>
+      <button id="pause-button" class="btn btn-primary btn-lg" disabled>Pause</button>
+      <button id="stop-button" class="btn btn-primary btn-lg" disabled>Stop</button>
+    </div>
+    <div class="song-name"></div>
+    <input type="file" id="mp3-file-input" accept=".mp3" style="display: none;">
+    <label for="mp3-file-input" class="btn btn-primary btn-lg">Select MP3 File</label>
+    <input type="range" id="skip-slider" class="slider" min="0" max="100" step="1" value="0">
+  </div>
+
+  <div class="about-section">
+      <h4>About</h4>
+      <p>This music player is created by Ankuron Konwar.</p>
+    </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
